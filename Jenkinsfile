@@ -6,11 +6,6 @@ pipeline {
     }
    
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Quickie31/Jankins_lab.git'
-            }
-        }
         stage('Build') {
             steps {
                 sh 'g++ -o hello_world hello_world.cpp'
